@@ -12,14 +12,13 @@ class MenuTableVC: UITableViewController {
 
     var numberOfVisibleRows: Int!
     var menuItems: [MenuItem]!
-    var changedIndexes: [Int]!
+    var changedIndexes: [Int]! = []
     override func viewDidLoad() {
         super.viewDidLoad()
         menuItems = [MenuItem(title: "Home", icon: #imageLiteral(resourceName: "home_icon")),
                      MenuItem(title: "TV", icon: #imageLiteral(resourceName: "home_icon")),
                      MenuItem(title: "Expandable", icon: #imageLiteral(resourceName: "home_icon"), isExpanded: false, subItems: [MenuItem(title: "One", icon: #imageLiteral(resourceName: "empty_icon")),
                                                                                                                                  MenuItem(title: "Two", icon: #imageLiteral(resourceName: "empty_icon"))])]
-        
         numberOfVisibleRows = menuItems.count
     }
 
@@ -37,7 +36,13 @@ class MenuTableVC: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let obj = menuItems[indexPath.row]
+        let obj: MenuItem!
+        if (changedIndexes.count > 0){
+            obj = menuItems[changedIndexes[0]-1]
+        }else {
+            obj = menuItems[indexPath.row]
+        }
+        
         var cellIdentifier: String!
         if (obj.isExpanded == true) {
             for i in 0 ..< changedIndexes.count {
@@ -62,7 +67,7 @@ class MenuTableVC: UITableViewController {
             menuItems[indexPath.row].isExpanded = true
             for i in 0 ..< obj.subItems.count {
                 numberOfVisibleRows = numberOfVisibleRows + 1
-                changedIndexes?[i] = indexPath.row+i+1
+                changedIndexes.append(indexPath.row+i+1)
                 insert(currentIndex: indexPath.row+i+1, indPath: indexPath)
             }
         }else if obj.isExpanded && obj.subItems.count > 0{
