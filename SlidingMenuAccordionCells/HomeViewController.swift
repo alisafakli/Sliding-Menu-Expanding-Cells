@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {

@@ -30,22 +30,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Table View Controller-->
         <scene sceneID="12g-k2-bGJ">
             <objects>
-                <tableViewController id="xrT-1f-YRR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gfG-VJ-F4f">
+                <tableViewController id="xrT-1f-YRR" customClass="MenuTableViewController" customModule="SlidingMenuAccordionCells" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" id="gfG-VJ-F4f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.78457389020000001" green="0.77661852009999999" blue="0.84534522249999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.36761253240000002" green="0.36761253240000002" blue="0.36761253240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5Rb-8Z-H9G">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menu_cell" rowHeight="120" id="5Rb-8Z-H9G" customClass="MenuCell" customModule="SlidingMenuAccordionCells" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Rb-8Z-H9G" id="NWB-3s-CJ5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZZ-Zq-XXR" userLabel="FirstView">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o18-6o-05L">
+                                                    <rect key="frame" x="166" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.14550384425524632" green="0.43330387640862889" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="o18-6o-05L" firstAttribute="centerY" secondItem="mZZ-Zq-XXR" secondAttribute="centerY" id="KHj-nb-3rs"/>
+                                                <constraint firstAttribute="height" constant="40" id="Pi6-kk-9NM"/>
+                                                <constraint firstItem="o18-6o-05L" firstAttribute="centerX" secondItem="mZZ-Zq-XXR" secondAttribute="centerX" id="Qj7-Wt-ejP"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wO0-Eq-3Y1" userLabel="SecondView">
+                                            <rect key="frame" x="0.0" y="40" width="375" height="0.0"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-am-G3h">
+                                                    <rect key="frame" x="166.5" y="9.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.92172361099658229" green="0.28858595855260499" blue="0.7728857298940558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="999" id="Dv0-ie-p4K"/>
+                                                <constraint firstItem="e1o-am-G3h" firstAttribute="centerY" secondItem="wO0-Eq-3Y1" secondAttribute="centerY" priority="998" constant="20" id="gcR-mI-pVQ"/>
+                                                <constraint firstItem="e1o-am-G3h" firstAttribute="centerX" secondItem="wO0-Eq-3Y1" secondAttribute="centerX" priority="998" id="tbQ-yy-LDk"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mZZ-Zq-XXR" firstAttribute="top" secondItem="NWB-3s-CJ5" secondAttribute="top" id="JBo-H7-VCf"/>
+                                        <constraint firstItem="wO0-Eq-3Y1" firstAttribute="leading" secondItem="NWB-3s-CJ5" secondAttribute="leading" id="epc-3M-BA0"/>
+                                        <constraint firstItem="wO0-Eq-3Y1" firstAttribute="top" secondItem="mZZ-Zq-XXR" secondAttribute="bottom" id="gnu-5t-Nr7"/>
+                                        <constraint firstAttribute="trailing" secondItem="mZZ-Zq-XXR" secondAttribute="trailing" id="kuY-No-KT3"/>
+                                        <constraint firstItem="mZZ-Zq-XXR" firstAttribute="leading" secondItem="NWB-3s-CJ5" secondAttribute="leading" id="n86-QL-fKh"/>
+                                        <constraint firstAttribute="trailing" secondItem="wO0-Eq-3Y1" secondAttribute="trailing" id="uz7-pX-SLQ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.36761253238341973" green="0.36761253238341973" blue="0.36761253238341973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="firstView" destination="mZZ-Zq-XXR" id="11s-Ki-4iw"/>
+                                    <outlet property="firstViewLabel" destination="o18-6o-05L" id="7gT-Pb-tPt"/>
+                                    <outlet property="secondHeightConstraints" destination="Dv0-ie-p4K" id="FDC-tO-52D"/>
+                                    <outlet property="secondView" destination="wO0-Eq-3Y1" id="0gg-dU-GSi"/>
+                                    <outlet property="secondViewLabel" destination="e1o-am-G3h" id="PeQ-zt-Gee"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,12 +110,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwf-so-iDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="-237"/>
+            <point key="canvasLocation" x="933.60000000000002" y="-237.03148425787109"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="2PF-ZN-pzJ">
             <objects>
-                <viewController id="EeJ-NC-H3x" customClass="MenuViewController" customModule="SlidingMenuAccordionCells" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EeJ-NC-H3x" customClass="HomeViewController" customModule="SlidingMenuAccordionCells" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ASl-rn-JFS"/>
                         <viewControllerLayoutGuide type="bottom" id="6yR-SJ-dSU"/>
@@ -72,7 +126,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Emp-zm-uDp">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Rs0-oj-NQs"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon" id="Rs0-oj-NQs">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="Rs0-oj-NQs" id="NLR-vy-YGy"/>
@@ -101,4 +157,7 @@
             <point key="canvasLocation" x="925.60000000000002" y="418.74062968515744"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu_icon" width="35" height="35"/>
+    </resources>
 </document>
