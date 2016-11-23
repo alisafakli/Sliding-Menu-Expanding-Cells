@@ -57,6 +57,7 @@ class MenuTableVC: UITableViewController {
         cellIdentifier = "main_cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! MenuCellV2
         cell.mainTitleLabel.text = obj.title
+        cell.mainLogoImageView.image = obj.icon
         return cell
     }
     
