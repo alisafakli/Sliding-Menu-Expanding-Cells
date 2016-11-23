@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		181203CD1DE5FD2E00D32AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181203CC1DE5FD2E00D32AE0 /* AppDelegate.swift */; };
-		181203CF1DE5FD2E00D32AE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181203CE1DE5FD2E00D32AE0 /* ViewController.swift */; };
+		181203CF1DE5FD2E00D32AE0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181203CE1DE5FD2E00D32AE0 /* MenuViewController.swift */; };
 		181203D21DE5FD2E00D32AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181203D01DE5FD2E00D32AE0 /* Main.storyboard */; };
 		181203D41DE5FD2E00D32AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181203D31DE5FD2E00D32AE0 /* Assets.xcassets */; };
 		181203D71DE5FD2E00D32AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181203D51DE5FD2E00D32AE0 /* LaunchScreen.storyboard */; };
 		181203E21DE5FD2E00D32AE0 /* SlidingMenuAccordionCellsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181203E11DE5FD2E00D32AE0 /* SlidingMenuAccordionCellsTests.swift */; };
 		181203ED1DE5FD2E00D32AE0 /* SlidingMenuAccordionCellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181203EC1DE5FD2E00D32AE0 /* SlidingMenuAccordionCellsUITests.swift */; };
+		1817F04F1DE60B49005C372A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817F04E1DE60B49005C372A /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		181203C91DE5FD2E00D32AE0 /* SlidingMenuAccordionCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidingMenuAccordionCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181203CC1DE5FD2E00D32AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		181203CE1DE5FD2E00D32AE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		181203CE1DE5FD2E00D32AE0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		181203D11DE5FD2E00D32AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		181203D31DE5FD2E00D32AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		181203D61DE5FD2E00D32AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		181203E81DE5FD2E00D32AE0 /* SlidingMenuAccordionCellsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidingMenuAccordionCellsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181203EC1DE5FD2E00D32AE0 /* SlidingMenuAccordionCellsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuAccordionCellsUITests.swift; sourceTree = "<group>"; };
 		181203EE1DE5FD2E00D32AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1817F04C1DE60B49005C372A /* SlidingMenuAccordionCells-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlidingMenuAccordionCells-Bridging-Header.h"; sourceTree = "<group>"; };
+		1817F04D1DE60B49005C372A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1817F04E1DE60B49005C372A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,9 @@
 		181203CB1DE5FD2E00D32AE0 /* SlidingMenuAccordionCells */ = {
 			isa = PBXGroup;
 			children = (
+				1817F04B1DE60B2B005C372A /* SWReveal */,
 				181203CC1DE5FD2E00D32AE0 /* AppDelegate.swift */,
-				181203CE1DE5FD2E00D32AE0 /* ViewController.swift */,
+				181203CE1DE5FD2E00D32AE0 /* MenuViewController.swift */,
 				181203D01DE5FD2E00D32AE0 /* Main.storyboard */,
 				181203D31DE5FD2E00D32AE0 /* Assets.xcassets */,
 				181203D51DE5FD2E00D32AE0 /* LaunchScreen.storyboard */,
@@ -123,6 +128,16 @@
 				181203EE1DE5FD2E00D32AE0 /* Info.plist */,
 			);
 			path = SlidingMenuAccordionCellsUITests;
+			sourceTree = "<group>";
+		};
+		1817F04B1DE60B2B005C372A /* SWReveal */ = {
+			isa = PBXGroup;
+			children = (
+				1817F04D1DE60B49005C372A /* SWRevealViewController.h */,
+				1817F04E1DE60B49005C372A /* SWRevealViewController.m */,
+				1817F04C1DE60B49005C372A /* SlidingMenuAccordionCells-Bridging-Header.h */,
+			);
+			path = SWReveal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +208,7 @@
 				TargetAttributes = {
 					181203C81DE5FD2E00D32AE0 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					181203DC1DE5FD2E00D32AE0 = {
@@ -259,8 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181203CF1DE5FD2E00D32AE0 /* ViewController.swift in Sources */,
+				181203CF1DE5FD2E00D32AE0 /* MenuViewController.swift in Sources */,
 				181203CD1DE5FD2E00D32AE0 /* AppDelegate.swift in Sources */,
+				1817F04F1DE60B49005C372A /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +429,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SlidingMenuAccordionCells/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisafakli.SlidingMenuAccordionCells;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlidingMenuAccordionCells/SWReveal/SlidingMenuAccordionCells-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -424,10 +444,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SlidingMenuAccordionCells/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisafakli.SlidingMenuAccordionCells;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlidingMenuAccordionCells/SWReveal/SlidingMenuAccordionCells-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -505,6 +527,7 @@
 				181203F31DE5FD2E00D32AE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		181203F41DE5FD2E00D32AE0 /* Build configuration list for PBXNativeTarget "SlidingMenuAccordionCellsTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +536,7 @@
 				181203F61DE5FD2E00D32AE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		181203F71DE5FD2E00D32AE0 /* Build configuration list for PBXNativeTarget "SlidingMenuAccordionCellsUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +545,7 @@
 				181203F91DE5FD2E00D32AE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
