@@ -8,18 +8,19 @@
 
 import UIKit
 
-class MenuTableVC: UITableViewController {
+class MenuTableVC: UITableViewController, SWRevealViewControllerDelegate {
 
     var numberOfVisibleRows: Int!
     var menuItems: [MenuItem]!
     var changedIndexes: [Int]! = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuItems = [MenuItem(title: "Home", icon: #imageLiteral(resourceName: "home_icon")),
-                     MenuItem(title: "TV", icon: #imageLiteral(resourceName: "home_icon")),
+        menuItems = [MenuItem(title: "Home", icon: #imageLiteral(resourceName: "home_icon"), segueIdentifier: "testScreen"),
+                     MenuItem(title: "TV", icon: #imageLiteral(resourceName: "home_icon"), segueIdentifier: "test2Screen"),
                      MenuItem(title: "Expandable", icon: #imageLiteral(resourceName: "home_icon"), isExpanded: false, subItems: [MenuItem(title: "One", icon: #imageLiteral(resourceName: "empty_icon")),
-                                                                                                                                 MenuItem(title: "Two", icon: #imageLiteral(resourceName: "empty_icon"))])]
+                                                                                                                                 MenuItem(title: "Two", icon: #imageLiteral(resourceName: "empty_icon"))], segueIdentifier: "test3Screen")]
         numberOfVisibleRows = menuItems.count
+        print(tableView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,18 +48,18 @@ class MenuTableVC: UITableViewController {
         if (obj.isExpanded == true) {
             for i in 0 ..< changedIndexes.count {
                 if indexPath.row == changedIndexes[i] {
-                    cellIdentifier = "subitem_cell"
-                    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! MenuCellV2
-                    cell.subTitleLabel.text = obj.subItems[i].title
-                    return cell
+                    cellIdentifier = "cell"
+                    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+                    cell?.detailTextLabel?.text = obj.subItems[i].title
+                    return cell!
                 }
             }
         }
-        cellIdentifier = "main_cell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! MenuCellV2
-        cell.mainTitleLabel.text = obj.title
-        cell.mainLogoImageView.image = obj.icon
-        return cell
+        cellIdentifier = "cell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        cell?.textLabel?.text = obj.title
+        cell?.imageView?.image = obj.icon
+        return cell!
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -83,8 +84,31 @@ class MenuTableVC: UITableViewController {
         self.tableView.beginUpdates()
         self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         self.tableView.endUpdates()
+        
+        changeVC(segueIdentifier: obj.segueIdentifier)
     }
-
+    
+    func changeVC(segueIdentifier: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let frontViewController = storyboard.instantiateViewController(withIdentifier: segueIdentifier)
+        
+        
+        let navController: UINavigationController = UINavigationController(rootViewController: frontViewController)
+        
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: "menuScreen") as! MenuTableVC
+        
+        
+        let revealController: SWRevealViewController = SWRevealViewController(rearViewController: menuViewController, frontViewController: navController)
+        revealController.delegate = self
+        
+        //        let rightViewController : MenuTableVC = MenuTableVC()
+        //        rightViewController.view.backgroundColor = UIColor.purple
+        //
+        //        revealController.rightViewController = rightViewController
+        
+        
+        self.revealViewController().present(revealController, animated: true, completion: nil)
+    }
 
     func insert(currentIndex: Int, indPath: IndexPath) {
         

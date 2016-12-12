@@ -16,10 +16,12 @@
 		181203ED1DE5FD2E00D32AE0 /* SlidingMenuAccordionCellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181203EC1DE5FD2E00D32AE0 /* SlidingMenuAccordionCellsUITests.swift */; };
 		1817F04F1DE60B49005C372A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817F04E1DE60B49005C372A /* SWRevealViewController.m */; };
 		1817F0541DE6155B005C372A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817F0531DE6155B005C372A /* MenuItem.swift */; };
-		1817F0561DE61661005C372A /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817F0551DE61661005C372A /* MenuTableViewController.swift */; };
-		1817F0581DE61B04005C372A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817F0571DE61B04005C372A /* MenuCell.swift */; };
+		184D93C31DFF0D0F00840080 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D93C21DFF0D0F00840080 /* TestVC.swift */; };
+		184D93CB1DFF29AA00840080 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D93CA1DFF29AA00840080 /* BaseVC.swift */; };
+		184D93CD1DFF37C700840080 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D93CC1DFF37C700840080 /* YellowViewController.swift */; };
+		184D93CF1DFF383C00840080 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D93CE1DFF383C00840080 /* GreenViewController.swift */; };
 		18EB87521DE62CAF00D29B60 /* MenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB87511DE62CAF00D29B60 /* MenuTableVC.swift */; };
-		18EB87541DE62FF600D29B60 /* MenuCellV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB87531DE62FF600D29B60 /* MenuCellV2.swift */; };
+		18EB87541DE62FF600D29B60 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB87531DE62FF600D29B60 /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +59,12 @@
 		1817F04D1DE60B49005C372A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		1817F04E1DE60B49005C372A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		1817F0531DE6155B005C372A /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		1817F0551DE61661005C372A /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = SlidingMenuAccordionCells/MenuTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		1817F0571DE61B04005C372A /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		184D93C21DFF0D0F00840080 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		184D93CA1DFF29AA00840080 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		184D93CC1DFF37C700840080 /* YellowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		184D93CE1DFF383C00840080 /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		18EB87511DE62CAF00D29B60 /* MenuTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableVC.swift; sourceTree = "<group>"; };
-		18EB87531DE62FF600D29B60 /* MenuCellV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellV2.swift; sourceTree = "<group>"; };
+		18EB87531DE62FF600D29B60 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +119,14 @@
 				1817F04B1DE60B2B005C372A /* SWReveal */,
 				181203CC1DE5FD2E00D32AE0 /* AppDelegate.swift */,
 				181203CE1DE5FD2E00D32AE0 /* HomeViewController.swift */,
+				184D93C21DFF0D0F00840080 /* TestVC.swift */,
 				181203D01DE5FD2E00D32AE0 /* Main.storyboard */,
 				181203D31DE5FD2E00D32AE0 /* Assets.xcassets */,
 				181203D51DE5FD2E00D32AE0 /* LaunchScreen.storyboard */,
 				181203D81DE5FD2E00D32AE0 /* Info.plist */,
+				184D93CA1DFF29AA00840080 /* BaseVC.swift */,
+				184D93CC1DFF37C700840080 /* YellowViewController.swift */,
+				184D93CE1DFF383C00840080 /* GreenViewController.swift */,
 			);
 			path = SlidingMenuAccordionCells;
 			sourceTree = "<group>";
@@ -155,10 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				1817F0531DE6155B005C372A /* MenuItem.swift */,
-				1817F0551DE61661005C372A /* MenuTableViewController.swift */,
-				1817F0571DE61B04005C372A /* MenuCell.swift */,
 				18EB87511DE62CAF00D29B60 /* MenuTableVC.swift */,
-				18EB87531DE62FF600D29B60 /* MenuCellV2.swift */,
+				18EB87531DE62FF600D29B60 /* MenuCell.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -298,14 +304,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18EB87541DE62FF600D29B60 /* MenuCellV2.swift in Sources */,
+				18EB87541DE62FF600D29B60 /* MenuCell.swift in Sources */,
 				181203CF1DE5FD2E00D32AE0 /* HomeViewController.swift in Sources */,
 				1817F0541DE6155B005C372A /* MenuItem.swift in Sources */,
-				1817F0581DE61B04005C372A /* MenuCell.swift in Sources */,
-				1817F0561DE61661005C372A /* MenuTableViewController.swift in Sources */,
 				18EB87521DE62CAF00D29B60 /* MenuTableVC.swift in Sources */,
+				184D93CF1DFF383C00840080 /* GreenViewController.swift in Sources */,
 				181203CD1DE5FD2E00D32AE0 /* AppDelegate.swift in Sources */,
+				184D93C31DFF0D0F00840080 /* TestVC.swift in Sources */,
 				1817F04F1DE60B49005C372A /* SWRevealViewController.m in Sources */,
+				184D93CD1DFF37C700840080 /* YellowViewController.swift in Sources */,
+				184D93CB1DFF29AA00840080 /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  MenuCell.swift
+//  MenuCellV2.swift
 //  SlidingMenuAccordionCells
 //
 //  Created by Ali Safakli on 23/11/2016.
@@ -10,11 +10,9 @@ import UIKit
 
 class MenuCell: UITableViewCell {
 
-    @IBOutlet weak var secondHeightConstraints: NSLayoutConstraint!
-    @IBOutlet weak var secondViewLabel: UILabel!
-    @IBOutlet weak var firstViewLabel: UILabel!
-    @IBOutlet weak var secondView: UIView!
-    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var mainTitleLabel: UILabel!
+    @IBOutlet weak var mainLogoImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,12 +22,6 @@ class MenuCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    var showDetails = false {
-        didSet {
-            secondHeightConstraints.priority = showDetails ? 250 : 999
-        }
     }
 
 }

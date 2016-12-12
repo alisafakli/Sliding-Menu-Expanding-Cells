@@ -8,22 +8,45 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseVC, SWRevealViewControllerDelegate {
 
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+    var swReveal: SWRevealViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        menuButton.target = self.revealViewController()
-        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-        
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let frontViewController = storyboard.instantiateViewController(withIdentifier: "testScreen") as! TestVC //SWRevealViewController
+        
+        
+        let navController: UINavigationController = UINavigationController(rootViewController: frontViewController)
+        
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: "menuScreen") as! MenuTableVC
+        
+        
+        let revealController: SWRevealViewController = SWRevealViewController(rearViewController: menuViewController, frontViewController: navController)
+        revealController.delegate = self
+        
+//        let rightViewController : MenuTableVC = MenuTableVC()
+//        rightViewController.view.backgroundColor = UIColor.purple
+//        
+//        revealController.rightViewController = rightViewController
+        
+        self.swReveal = revealController
+        
+        self.revealViewController().present(self.swReveal, animated: true, completion: nil)
+        
+        
+    }
 
 }
